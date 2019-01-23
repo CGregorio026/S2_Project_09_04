@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<!-- 
+   New Perspectives on HTML and CSS, 7th Edition
+   Tutorial 7
+   Case 4
+   
+   Author: Christian Gregorio
+   Date: 1.22.18
+
+   Filename: index.html
+
+-->
+
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="mc_reset.css" />
+    <link rel="stylesheet" href="mc_styles.css" />
+    <link rel="stylesheet" href="mc_forms.css" />
+    <script src="mc_script.js"></script>
+</head>
+
+<body>
+
+    <form id="cForm" action=" http://www.mill_computers.com/orders/process.cgi" method="post">
+        <!-- fieldset 1 -->
+        <fieldset id="custInfo">
+            <legend>Customer Information</legend>
+
+            <div class="formRow">
+                <label for="fName">First Name</label>
+                <input type="text" name="fName" id="fName" required />
+            </div>
+
+            <div class="formRow">
+                <label for="lName">Last Name</label>
+                <input type="text" name="lName" id="lName" required />
+            </div>
+
+            <div class="formRow">
+                <label for="street">Street Address</label>
+                <input type="text" name="street" id="street" required />
+            </div>
+
+            <div class="formRow">
+                <label for="city">City</label>
+                <input type="text" name="city" id="city" required />
+            </div>
+
+            <div class="formRow">
+                <label for="state">State</label>
+                <input type="text" name="state" id="state" required />
+            </div>
+
+            <div class="formRow">
+                <label for="zip">Zip Code</label>
+                <input type="text" name="zip" id="zip" pattern="^\d{5}(-\d{4})?$" required placeholder="nnnnn(-nnnn)" />
+            </div>
+
+            <div class="formRow">
+                <label for="phone">Phone Number</label>
+                <input type="text" name="phone" id="phone" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$"
+                    required placeholder="(nnn) nnn-nnnn" />
+            </div>
+
+        </fieldset>
+        <!-- end fieldset 1 -->
+        <!-- fieldset 2 -->
+        <fieldset>
+            <legend>Extra Components</legend>
+
+            <div class="formRow">
+                <label for="pSpeed">Processor Speed</label>
+                <select name="pSpeed" id="pSpeed">
+                    <option value="3.2GHz">3.2GHz</option>
+                    <option value="4.0GHz">4.0GHz</option>
+                    <option value="5.2GHz">5.2GHz</option>
+                </select>
+            </div>
+
+            <div class="formRow">
+                <label for="mem">Memory</label>
+                <select name="mem" id="mem">
+                    <option value="1 GB">1 GB</option>
+                    <option value="2 GB">2 GB</option>
+                    <option value="4 GB">4 GB</option>
+                    <option value="8 GB">8 GB</option>
+                </select>
+            </div>
+
+            <div class="formRow">
+                <label for="monitor">Monitor Size</label>
+                <select name="monitor" id="monitor">
+                    <option value="15">15"</option>
+                    <option value="17">17"</option>
+                    <option value="19">19"</option>
+                    <option value="21">21"</option>
+                </select>
+            </div>
+
+            <div class="formRow">
+                <label for="hd">Hard Drive Size</label>
+                <select name="hd" id="hd">
+                    <option value="240GB">240GB</option>
+                    <option value="500GB">500GB</option>
+                    <option value="750GB">750GB</option>
+                    <option value="1TB">1 TB</option>
+                </select>
+            </div>
+
+        </fieldset>
+        <!-- end fieldset 2 -->
+
+        <label>DVD Burner</label>
+        <fieldset>
+            <label for="dYes">Yes</label>
+            <input type="radio" name="dvd" id="dYes" value="Yes" />
+            <label for="dNo">No</label>
+            <input type="radio" name="dvd" id="dNo" value="No" />
+        </fieldset>
+
+        <label>Tuner Card</label>
+        <fieldset>
+            <label for="tYes">Yes</label>
+            <input type="radio" name="tCard" id="tYes" value="Yes" />
+            <label for="tNo">No</label>
+            <input type="radio" name="tCard" id="tNo" value="No" />
+        </fieldset>
+
+        <label>Media Reader Card</label>
+        <fieldset>
+            <label for="mYes">Yes</label>
+            <input type="radio" name="mCard" id="mYes" value="Yes" />
+            <label for="mNo">No</label>
+            <input type="radio" name="mCard" id="mNo" value="No" />
+        </fieldset>
+
+        <input type="checkbox" name="warranty" id="wCheck" value="yes" />
+        <label for="wCheck">Would you like the 24-Month Extended Warranty?</label>
+        <br>
+
+        <label for="commBox">Would you like any additional information or customization that isn't listed here?</label>
+        <textarea name="addInfo" id="commBox"></textarea>
+
+
+        <div id="buttons">
+            <!-- 
+            This button submits the data entered, but not before checking to see if the information entered is correct. If the form is missing something, it will notify the user that they need to enter in information correctly
+         -->
+            <input type="submit" value="Send Order" />
+
+            <!-- 
+            This button returns all values to their default.
+         -->
+            <input type="reset" value="Cancel Order" />
+
+            <!-- 
+            This is the command button, but I didn't see any commands that I thought would fit with the requirements specified to email the creator of the website..
+         -->
+            <input type="button" value="Contact Me!" />
+        </div>
+
+
+    </form>
+
+</body>
+
+</html>
