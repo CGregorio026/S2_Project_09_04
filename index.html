@@ -18,15 +18,28 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Millenium Computers</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="mc_reset.css" />
-    <link rel="stylesheet" href="mc_styles.css" />
     <link rel="stylesheet" href="mc_forms.css" />
+    <link rel="stylesheet" href="mc_styles.css" />
     <script src="mc_script.js"></script>
 </head>
 
 <body>
+    <header>
+        <img src="mc_logo.png" alt="">
+    </header>
+
+<nav>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Smartphones</a></li>
+        <li><a href="#">Tablets</a></li>
+        <li><a href="#">Checkout</a></li>
+    </ul>
+</nav>
 
     <form id="cForm" action=" http://www.mill_computers.com/orders/process.cgi" method="post">
         <!-- fieldset 1 -->
@@ -117,32 +130,32 @@
         </fieldset>
         <!-- end fieldset 2 -->
 
-        <label>DVD Burner</label>
-        <fieldset>
+        <fieldset class="opt">
+            <legend>DVD Burner</legend>
             <label for="dYes">Yes</label>
             <input type="radio" name="dvd" id="dYes" value="Yes" />
             <label for="dNo">No</label>
             <input type="radio" name="dvd" id="dNo" value="No" />
         </fieldset>
 
-        <label>Tuner Card</label>
-        <fieldset>
+        <fieldset class="opt">
+            <legend>Tuner Card</legend>
             <label for="tYes">Yes</label>
             <input type="radio" name="tCard" id="tYes" value="Yes" />
             <label for="tNo">No</label>
             <input type="radio" name="tCard" id="tNo" value="No" />
         </fieldset>
 
-        <label>Media Reader Card</label>
-        <fieldset>
+        <fieldset class="opt">
+            <legend>Media Reader Card</legend>
             <label for="mYes">Yes</label>
             <input type="radio" name="mCard" id="mYes" value="Yes" />
             <label for="mNo">No</label>
             <input type="radio" name="mCard" id="mNo" value="No" />
         </fieldset>
 
-        <input type="checkbox" name="warranty" id="wCheck" value="yes" />
-        <label for="wCheck">Would you like the 24-Month Extended Warranty?</label>
+       <label for="wCheck">Would you like the 24-Month Extended Warranty?</label> 
+       <input type="checkbox" name="warranty" id="wCheck" value="yes" />
         <br>
 
         <label for="commBox">Would you like any additional information or customization that isn't listed here?</label>
@@ -169,6 +182,9 @@
 
     </form>
 
+    <footer>
+        Millenium Computers &copy; EST 2016 &trade;
+    </footer>
 </body>
 
 </html>

@@ -16,12 +16,24 @@
 This makes the background color a gradient which goes from blue to green.
 */
 html {
-    background: #283c86;
+    background: #0000d0;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #283c86, #45a247);
+    background: -webkit-linear-gradient(to left, #ffffff, #0000d0);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #283c86, #45a247);
+    background: linear-gradient(to left, #ffffff, #0000d0);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    height: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/* 
+Displays the nav links next to one another.
+*/
+nav ul li{
+    display:block;
+    float: left;
+    width: 20%;
+    text-align: center;
 }
 
 /* 
@@ -30,5 +42,23 @@ This centers the body and gives it a width smaller than the html, which makes th
 body {
     width: 80%;
     margin: 0 auto;
-    background: white;
+    background: rgba(255, 255, 255, 0.8);
+    height: 100%;
 }
+
+/* 
+For whatever reason, my code decided to break itself and omit some white from the body. So, I displayed everything in the body as white.
+*/
+body>* {
+    background-color: #ffffffcc;
+}
+
+/* 
+This displays the footer on its own with the text in the center of the screen.
+*/
+footer {
+    text-align: center;
+    clear: both;
+}
+
+
